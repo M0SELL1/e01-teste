@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <form>
+        <fieldset style="width: 30%">
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="codigo"> Código: </label>
+                <input type="text" id="codigo" style="width: 20%;">
+            </p>
+            <p>
+                <label for="nome"> Nome: </label>
+                <input type="text" id="nome">
+            </p>
+            <p>
+                <label for="senha"> Senha: </label>
+                <input type="password" id="senha" style="width: 20%;">
+            </p>
+            <p>
+                <span>Sexo:</span>
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino"> Masculino: </label>
+                <input type="radio" id="feminino" name="sexo" value="feminino">
+                <label for="feminino"> Feminino: </label>
+            </p>
+            <p>
+                <label for="idade"> Idade: </label>
+                <input type="number" id="idade" min="0" max="100" style="width: 10%;">
+            </p>
+            <p>
+                <label for="marcaCartoes"> Cartão de Crédito: </label>
+                <input list="marcaCartoes" style="width: 30%;"/>
+                <datalist id="marcaCartoes">
+                    <option value="Mastercard">
+                    <option value="Visa">
+                    <option value="American Express">
+                </datalist>
+            </p>
+        </fieldset>
+
+        <fieldset style="width: 30%">
+            <legend>Dados Profissionais</legend>
+            <p>
+                <label for="tipoCargo"> Cargo: </label>
+                <input list="tipoCargo" style="width: 30%"/>
+                <datalist id="tipoCargo">
+                    <option value="Analista Junior">
+                    <option value="Analista Pleno">
+                    <option value="Analista Senior">
+                </datalist>
+            </p>
+            <p>
+                <span>Dados pessoais:</span>
+                <p> <input type="checkbox" id="opcao1" name="opcao1" value="fumante">
+                <label for="opcao1"> Fumante </label> </p>
+                <p> <input type="checkbox" id="opcao2" name="opcao2" value="atleta">
+                <label for="opcao2"> Pratica exercícios físicos </label> </p>
+                <p> <input type="checkbox" id="opcao3" name="opcao3" value="alcolatra">
+                <label for="opcao3"> Consome bebida alcoólica </label> </p>
+            </p>
+            <p>
+                <span>Experiencias Profissionais:</span>
+                <p> <textarea name="textarea" id="codigo" 
+                    cols="50" rows="3">Data Início/Data Fim/Empresa/Cargo
+                </textarea> </p> 
+            </p>
+        </fieldset>
+
+        <p> 
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Inserir"> 
+        </p>
+        
+    </form>
+
+</body>
+</html>

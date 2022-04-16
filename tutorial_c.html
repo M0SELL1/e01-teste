@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Programação</title>
+</head>
+<body>
+    <div>
+    <h1>Variáveis e expressões matemáticas</h1>
+    <p>Neste Manual serão apresentados os conceitos de variáveis e de expressões matemáticas! 
+        Esses são conceitos essenciais para a construção de algoritmos, já que sem eles seria 
+        inviável produzir um <b>algoritmo flexível</b>, que pudesse ser aplicado sobre dados 
+        distintos (e.g., o <i>algoritmo</i> da soma é flexível no sentido de podermos somar 
+        diferentes valores, não apenas 2 valores fixados).</p>
+    </div>
+
+    <ol>
+
+        <div>
+        <h2><li>Variáveis</li></h2>
+        <p>
+            Na programação, uma <b>variável</b> é um objeto capaz de reter e representar um valor 
+            ou expressão. Enquanto as variáveis só "existem" em tempo de execução, elas são 
+            associadas a "nomes", chamados identificadores, durante o tempo de desenvolvimento.
+            Um <b>comando de atribuição</b> pode ser divido em 3 partes:
+            <ol>
+                <li>o <b>lado esquerdo</b> da atribuição é composto pela <i>variável</i>;</li>
+                <li>o símbolo para igualdade "="; e</li> 
+                <li>o <b>lado direito da atribuição</b> que é composto por qualquer expressão aritmética.</li> 
+            </ol>
+        </p>
+        <p>
+            A leitura de uma atribuição deve ser: lado esquerdo recebe valor resultante do lado direito.
+            Abaixo ilustramos dois outros comandos de atribuição:
+            <ul> 
+                <li><mark>i = k</mark> significa que a variável de nome i (a partir desse ponto do código) 
+                passará a armazenar o valor que estava na variável k;</li>
+                <li><mark>fat = i*fat</mark> é exemplo mais "sofisticado", significa que a variável de nome 
+                    fat deve receber o valor que anteriormente (à este comando) era guardado em fat 
+                    multiplicado pelo valor guardado na variável i.</li>
+            </ul>
+        </p>
+        <p>
+            Portanto, o símbolo "<b>=</b>" não tem o sentido usual da Matemática, em boa parte das linguagens de 
+            programação "var = EXPRESSAO" significa que <i>deve-se computar o valor da expressão no <b>lado direito 
+            da atribuição</b> e depois atribuir este valor à variável (no caso) de nome var (no lado esquerdo da atribuição)</i>. 
+            Isso fica mais claro na segunda atribuição na figura 1; "fat = i*fat" significa que deve-se primeiro computar 
+            i*fat, depois atribuir seu resultado para a variável "fat".
+        </p>
+        </div>
+
+
+        <div>
+        <h2><li>Expressões matemáticas</li></h2>
+        <p>
+            Do mesmo modo que em matemática é essencial efetuarmos operações aritméticas com valores numéricos, 
+            o mesmo ocorre com o computador. Na verdade, efetuar contas de modo rápido e "sem erro" foi a grande 
+            motivação para se construir os computadores.
+        </p>
+        <p>
+            Neste, os agrupamentos de valores, variáveis e operadores aritméticos recebem o nome de <strong>expressão aritmética</strong>. 
+            De modo geral, podemos conceituar uma expressão aritmética <strong>EA</strong> como:
+            <ul>
+                <li><mark>EA = K:</mark> uma constante numérica é uma expressão aritmética</li>
+                <li><mark>EA = EA + EA | EA - EA | EA * EA | EA / EA:</mark> uma expressão aritmética seguida de um <b>operador binário</b> 
+                    (com 2 itens) e seguida por outra expressão aritmética é uma expressão aritmética</li>
+            </ul>
+        </p>
+        <p>
+            Os <b>operadores artiméticos binários em C</b> são:
+            <table border="1">
+                <tr>
+                    <td><b>Operações</b></td>
+                    <td><b>Operador</b></td>
+                    <td><b>Exemplo</b></td>
+                </tr>
+                <tr>
+                    <td>soma</td>
+                    <td>+</td>
+                    <td>2 + 4</td>
+                </tr>
+                <tr>
+                    <td>subtração</td>
+                    <td>-</td>
+                    <td>n1 + 1</td>
+                </tr>
+                <tr>
+                    <td>multiplicação</td>
+                    <td>*</td>
+                    <td>3 * n2</td>
+                </tr>
+                <tr>
+                    <td>divisão</td>
+                    <td>/</td>
+                    <td>n1 / n2</td>
+                </tr>
+            </table>
+        </p>
+        <p><small>Obs: foi usado espaço em branco entre os operandos e os operadores, mas isso não é obrigatório!</small></p>
+        </div>
+
+
+        <div>
+        <h2><li>Memória, bits e bytes</li></h2>
+        <p>
+            O conceito de variável foi introduzido a partir do surgimento as linguagens de programação. 
+            Antes disso era necessário fazer um acesso direto às posições de memória. Portanto, variável 
+            está associada às linguagens de programação (em um compilador ou via um interpretador), 
+            tendo sido definido para facilitar o armazenamento e recuperação de valores em determinada 
+            posição de memória (para facilitar a programação). 
+        </p>
+        <p>
+            Em última análise, os dados presentes na memória do computador são uma sequência de bits, 
+            e um bit corresponde a uma posição de memória que pode armazenar o valor 0 ou o valor 1. 
+            No início da computação moderna a menor quantidade de bits que podia ser acessada eram 8 bits, 
+            que foi denominado por byte.
+        </p>
+        <p>
+            Desse modo, toda informação armazenada no computador é uma sequência de bytes e o tratamento 
+            de cada que se dá para cada uma dessas sequências pode variar. Por exmeplo, pode considerar a 
+            sequência 0010 com uma letra ou como um inteiro. Ou seja, de acordo com o contexto, se ela estiver 
+            associada a uma variável do tipo inteiro pode-se interpretar a sequência como um número inteiro, 
+            se for uma variável do tipo caractere, como um caractere.
+        </p>
+
+        <h2><li>Exemplo</li></h2>
+        <pre>
+            #include &lt;stdio.h>
+            void main (void) {
+                //                                            Resultados:
+                printf ("3 / 2 * 2 = %d\n",   3 / 2 * 2);    //  3 / 2 * 2 = 2
+                printf ("3.0 / 2 * 2 = %f\n", 3.0 / 2 * 2);  //  3.0 / 2 * 2 = 3.000000
+            }
+
+        </pre>
+        </div>
+
+
+    </ol>
+
+</body>
+</html>
